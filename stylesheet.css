@@ -503,7 +503,7 @@ Details: AskReddit based theme */
     .comments-page .sitetable { border-left: 0; border-bottom: 0; }
     .markdownEditor .edit-btn:not(.btn-macro) { background-image: url(%%q-spritesheet-2%%)!important; border: 1px solid #ddd!important; background-color: #eee!important; }
 
-.markdownEditor .edit-btn:not(.btn-macro):hover { background-color: #e4e4e4!important; }
+    .markdownEditor .edit-btn:not(.btn-macro):hover { background-color: #e4e4e4!important; }
 
     .markdownEditor .btn-bold { background-position: -5px -107px!important; }
     .markdownEditor .btn-italic { background-position: -97px -107px!important; }
@@ -593,7 +593,7 @@ Details: AskReddit based theme */
     .usertext-body .md .expando-button { vertical-align: middle!important; }
 
     .res .commentarea .expando-button.image,
-.res .commentarea .expando-button.video-muted.collapsed {
+    .res .commentarea .expando-button.video-muted.collapsed {
         background: transparent none no-repeat scroll center center;
         height: 13px !important;
         max-height: 13px !important;
@@ -767,18 +767,19 @@ Details: AskReddit based theme */
     .sidecontentbox .content button { padding: 0 10px; margin-top: 10px; }
 
 /* Mod buttons */
-    .pretty-button.negative, .pretty-button.neutral, .pretty-button.positive, .entry .buttons li.reported-stamp {
+    .pretty-button.negative, .pretty-button.neutral, .pretty-button.positive, .pretty-button.inoffensive, .entry .buttons li.reported-stamp {
         margin: 0 2px; 
         color: #fff;
         line-height: 1.4em;
         padding: 0 5px;
         border: 1px solid rgba(0,0,0,.1)!important;
-        border-radius: 0; }
+        border-radius: 0;
+        text-indent: 0; }
 
     .pretty-button.positive { background: #69b391; }
     .pretty-button.negative { background: #DE576C; }
     .pretty-button.neutral { background: #b0bec5; }
-
+    .pretty-button.inoffensive { background: #71c5bc; }
     .pretty-button.positive:hover { background: #5cac87; }
     .pretty-button.negative:hover { background: #db475e; }
     .pretty-button.neutral:hover { background: #a5b5bd; }
@@ -1194,6 +1195,8 @@ Details: AskReddit based theme */
     .listing-page .link .entry { margin-left: 105px; }
     .front-page .expando { margin-left: 5px; }
 
+    .multi-page .link .entry { margin-left: 65px; }
+
     .front-page .content .spacer, .listing-page .content .spacer { margin-bottom: 0; }
 
     .linklisting .nav-buttons,
@@ -1391,9 +1394,9 @@ Details: AskReddit based theme */
     .sidecontentbox a.helplink:hover {background: #e9e9e9; }
     .sidecontentbox.trophy-area ul.content { margin: 0; border-left: 0; border-right: 0; }
     .multi-page .side .spacer:nth-of-type(5) .sidecontentbox .content { margin: 0; }
-.res .multi-page .side .RESshortcutside, .res .multi-page .side .RESDashboardToggle { width: 63px; margin: 0; }
-.res .multi-page .side .RESshortcutside, .res .multi-page .side .RESDashboardToggle { padding: .2em .1em; }
-.res .multi-page .side .RESshortcutside { margin: 0 5px 0 0; }
+    .res .multi-page .side .RESshortcutside, .res .multi-page .side .RESDashboardToggle { width: 63px; margin: 0; }
+    .res .multi-page .side .RESshortcutside, .res .multi-page .side .RESDashboardToggle { padding: .2em .1em; }
+    .res .multi-page .side .RESshortcutside { margin: 0 5px 0 0; }
 
     .subscription-box .title { font-size: small; line-height: 20px; }
     .subscription-box .box-separator { border: 0; }
@@ -1546,7 +1549,7 @@ Details: AskReddit based theme */
         font-size: 0px;
         display: block; }
 
-.comments-page #noresults { border-top: 1px solid #dee5e7; }
+    .comments-page #noresults { border-top: 1px solid #dee5e7; }
 
 /* Flairs */
     .flair, .linkflairlabel {
@@ -1555,7 +1558,7 @@ Details: AskReddit based theme */
         border: 1px solid rgba(0,0,0,.1);
         border-radius: 0; }
 
-.flairoptionpane a::before {display: none;}
+    .flairoptionpane a::before {display: none;}
 
 /* Gilded */
     .listing-page .comment.gilded { padding: 10px 10px 10px 20px; border-top: 1px solid rgba(0,0,0,.1); }
@@ -1791,3 +1794,14 @@ Details: AskReddit based theme */
 	#rem-login-main { display: none; }
 
 	.disabled .morelink, .disabled .morelink:hover { background: #f3f3f3; }
+
+/* Toolbox fixes */
+    .mod-toolbox .menuarea.modtools {
+        margin: 0px 300px 0 10px!important;
+        border-top: 0!important;
+        border-right: 0!important;
+        padding: 5px 10px!important;
+        z-index: 1!important;
+        background: #eef8f7!important; }
+
+    .mod-toolbox .menuarea.modtools .pretty-button { margin: 0; }

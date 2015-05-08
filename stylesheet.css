@@ -1401,6 +1401,8 @@ Details: AskReddit based theme */
     .subscription-box .title { font-size: small; line-height: 20px; }
     .subscription-box .box-separator { border: 0; }
 
+	.profile-page p.parent a.userTagLink { text-indent: 0; }
+
 /* Modtools */
     .icon-menu li { padding: 2px 2px 2px 10px; }
     .icon-menu li:hover { background: #fff; }
@@ -1871,3 +1873,12 @@ Details: AskReddit based theme */
 
 	.beta-hint a:hover { background-color: #3c444e!important; }
 	.res .beta-hint a { margin-left: -51px; border: 0; }
+
+/* extras */
+	.comment.collapsed .midcol { visibility: visible !important; }
+	.comment.collapsed .arrow.up, .comment.collapsed .arrow.down { display: none  !important; }
+	.userTagLink.hasTag, #userTaggerPreview {
+		padding: 0 8px!important;
+		border: 1px solid rgba(0,0,0,.1)!important;
+		line-height: 13px!important;
+		border-radius: 0!important; }

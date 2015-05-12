@@ -190,11 +190,12 @@ Details: AskReddit based theme */
     #header-bottom-right #mail.havemail { background-color: #FF7500; }
 
     #header-bottom-right #modmail {
-        margin: 0;
-        top: 0;
-        width: 35px;
-        height: 40px;
-        border-right: 1px solid rgba(225,255,255,.25); }
+        margin: 0!important;
+        top: 0!important;
+        width: 35px!important;
+vertical-align: top;
+        height: 40px!important;
+        border-right: 1px solid rgba(225,255,255,.25)!important; }
 
     #header-bottom-right #modmail.havemail { background: url(%%q-spritesheet-2%%) -50px -5px no-repeat #ff4500; }
     #header-bottom-right #modmail.nohavemail { background: url(%%q-spritesheet-2%%) -140px -5px no-repeat; }
@@ -1881,6 +1882,7 @@ Details: AskReddit based theme */
 /* extras */
 	.comment.collapsed .midcol { visibility: visible !important; }
 	.comment.collapsed .arrow.up, .comment.collapsed .arrow.down { display: none  !important; }
+	.thing.collapsed.deleted.comment { padding-left: 33px!important; }
 	.userTagLink.hasTag, #userTaggerPreview {
 		padding: 0 8px!important;
 		border: 1px solid rgba(0,0,0,.1)!important;
